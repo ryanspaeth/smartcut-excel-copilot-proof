@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — SmartCut Excel Copilot synthetic proof</title>
+</head>
+<body>
+<main>
+<h1>Privacy policy</h1>
+<p>This policy describes the SmartCut Excel Copilot synthetic proof connector only. It is not the privacy policy for SmartCut production software, the SmartCut website, or any other SmartCut service.</p>
+<p>Publisher: SmartCut B.V. Contact: <a href="mailto:office@smart-cut.io">office@smart-cut.io</a>.</p>
+<p>Connector endpoint: <code>https://europe-west3-smartcut-copilot-proof-893c5f.cloudfunctions.net/nativeExcelMcpProof/mcp</code></p>
+<p>Behavior reference: <a href="https://europe-west3-smartcut-copilot-proof-893c5f.cloudfunctions.net/nativeExcelMcpProof/docs">proof documentation</a>.</p>
+
+<h2>What this connector is</h2>
+<p>The connector tests native Excel Copilot against three fictional invoices. It reads no PDFs and no customer documents. It does not modify Excel and it does not create a genuine SmartCut workbook snip. Access mode is <code>synthetic_no_auth</code>. Microsoft identity and paid SmartCut licensing are not verified. All callers share one server-generated synthetic run.</p>
+<p>Tool access is limited to at most 100 searches and 100 new records, from 4 October 2026 20:10 Europe/Berlin until 5 October 2026 20:10 Europe/Berlin. Infrastructure may remain deployed after tool access ends.</p>
+
+<h2>Data the connector receives</h2>
+<p>Tool inputs you or Copilot send to the endpoint reach the proof server in the isolated Firebase project <code>smartcut-copilot-proof-893c5f</code> (region europe-west3). Those inputs are expected to be fabricated prompts and identifiers for the disposable Evidence workbook only (INV-SYN-001, INV-SYN-002, INV-SYN-003 and their configured targets).</p>
+<p>The connector does not ask for your Microsoft account, does not verify it, and does not receive a SmartCut license. Tenant staging does not restrict this anonymous public endpoint.</p>
+
+<h2>What is stored</h2>
+<p>Proof searches and simulated snip records persist in that isolated Firebase project for the life of the synthetic run. Searches expire after ten minutes, or earlier when the anonymous run expires. A simulated record is written only after fetched, unambiguous fictional evidence, and identical retries return the existing record. Status of those records is <code>simulated</code>.</p>
+<p>Logs exclude query contents and bearer tokens. Infrastructure can retain request metadata (for example time, status, and routing data).</p>
+
+<h2>What we do not do</h2>
+<p>This pilot does not sell personal data, does not use inputs to train a model, and does not read customer files. Do not send real invoices, customer documents, or personal data. If you do, contact <a href="mailto:office@smart-cut.io">office@smart-cut.io</a> and we will delete what the proof store still holds, to the extent the run has not already expired.</p>
+
+<h2>Legal basis and retention</h2>
+<p>Processing is limited to operating this short technical proof at your request when you invoke the connector. Stored proof records and searches are kept only until the run expires (5 October 2026 20:10 Europe/Berlin) unless an earlier deletion is requested. Request metadata kept by Google Cloud may follow that platform’s normal log retention.</p>
+
+<h2>Changes</h2>
+<p>Published 4 October 2026. This page will stay at this URL for the proof. If the connector behavior changes during the pilot, this page will be updated.</p>
+</main>
+</body>
+</html>

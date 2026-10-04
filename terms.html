@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of use — SmartCut Excel Copilot synthetic proof</title>
+</head>
+<body>
+<main>
+<h1>Terms of use</h1>
+<p>These terms cover the SmartCut Excel Copilot synthetic proof connector only. They are not the terms for SmartCut production software or any other SmartCut service.</p>
+<p>Publisher: SmartCut B.V. Contact: <a href="mailto:office@smart-cut.io">office@smart-cut.io</a>.</p>
+<p>Connector endpoint: <code>https://europe-west3-smartcut-copilot-proof-893c5f.cloudfunctions.net/nativeExcelMcpProof/mcp</code></p>
+<p>Privacy policy: <a href="./privacy.html">privacy.html</a>.</p>
+<p>Behavior reference: <a href="https://europe-west3-smartcut-copilot-proof-893c5f.cloudfunctions.net/nativeExcelMcpProof/docs">proof documentation</a>.</p>
+
+<h2>Pilot only</h2>
+<p>The connector is a time-boxed test of native Excel Copilot with three fictional invoices. It is provided as-is, with no uptime commitment and no support commitment beyond this pilot. SmartCut B.V. may disable tool access at or before 5 October 2026 20:10 Europe/Berlin. Infrastructure may stay deployed after that without accepting new tool calls.</p>
+
+<h2>What you may use it for</h2>
+<p>You may call the published tools (<code>search_test_evidence</code>, <code>fetch_test_evidence</code>, <code>create_test_snip_record</code>) only with fabricated prompts and the disposable Evidence workbook. Creation of a simulated record requires Copilot approval in Excel and the configured fictional target.</p>
+<p>You may not send real customer documents, real invoices, or personal data. You may not treat a <code>simulated</code> record as a SmartCut workbook snip, an audit result, or a production integration. The connector does not modify Excel.</p>
+
+<h2>Access</h2>
+<p>Access mode is anonymous (<code>synthetic_no_auth</code>). Microsoft identity and SmartCut licenses are not checked. All callers share one synthetic run, capped at 100 searches and 100 new records. There is no private tenant partition on this endpoint.</p>
+
+<h2>No warranty</h2>
+<p>The proof is experimental. SmartCut B.V. gives no warranty of fitness for a particular purpose, accuracy of fictional fixture data, or availability. Liability for use of this pilot is excluded to the extent permitted by Dutch law. Nothing in these terms limits liability that cannot legally be limited.</p>
+
+<h2>Changes</h2>
+<p>Published 4 October 2026. These terms stay at this URL for the proof. Continued calls after a change means you accept the updated terms.</p>
+</main>
+</body>
+</html>
